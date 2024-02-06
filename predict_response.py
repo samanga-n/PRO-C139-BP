@@ -41,10 +41,7 @@ def preprocess_user_input(user_input):
 
 def bot_class_prediction(user_input):
 
-    inp = preprocess_user_input(user_input)
-    prediction = model.predict(inp)
-    predicted_class_label = np.argmax(prediction[0])
-    return predicted_class_label
+    pass
 
 
 def bot_response(user_input):
@@ -52,10 +49,7 @@ def bot_response(user_input):
    predicted_class_label =  bot_class_prediction(user_input)
    predicted_class = classes[predicted_class_label]
 
-   for intent in intents['intents']:
-    if intent['tag']==predicted_class:
-        bot_response = random.choice(intent['responses'])
-        return bot_response
+   #complete the code
 
 print("Hi I am Stella, How Can I help you?")
 
